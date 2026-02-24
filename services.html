@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manufacturing Services | Dynamic Technical Formulations</title>
+<meta name="description" content="Explore DTF's supplement manufacturing capabilities: private label, custom formulation, CDMO services, RTM powder blending, capsule manufacturing, and in-house flavor development.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dynamic Technical Formulations">
+<meta property="og:title" content="Manufacturing Services | Dynamic Technical Formulations">
+<meta property="og:description" content="Explore DTF's supplement manufacturing capabilities: private label, custom formulation, CDMO services, RTM powder blending, capsule manufacturing, and in-house flavor development.">
+<meta property="og:url" content="https://dynamictechnicalformulations.com/services.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Manufacturing Services | Dynamic Technical Formulations">
+<meta name="twitter:description" content="Explore DTF's supplement manufacturing capabilities: private label, custom formulation, CDMO services, RTM powder blending, capsule manufacturing, and in-house flavor development.">
+<link rel="icon" href="DTF-logo-mono.png" type="image/png">
+<link rel="stylesheet" href="style.css">
+<style>
+.services-full-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.service-detail-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 16px; overflow: hidden; box-shadow: var(--card-shadow); transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s; }
+.service-detail-card:hover { transform: translateY(-5px); box-shadow: var(--card-shadow-hover); border-color: rgba(46,200,168,0.22); }
+.service-card-top { padding: 36px 32px 28px; }
+.service-card-top .card-icon { margin-bottom: 20px; }
+.service-card-top h3 { margin-bottom: 12px; }
+.service-card-top p { font-size: 0.9rem; line-height: 1.75; color: var(--text-muted); }
+.service-card-bottom { padding: 20px 32px 28px; border-top: 1px solid var(--border-light); background: var(--bg-soft); }
+.service-card-bottom h4 { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px; }
+.service-card-bottom ul { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.service-card-bottom ul li { font-size: 0.83rem; color: var(--text-mid); display: flex; gap: 8px; align-items: flex-start; }
+.service-card-bottom ul li::before { content: '→'; color: var(--accent-solid); font-size: 0.75rem; margin-top: 1px; flex-shrink: 0; }
+
+.process-section { background: var(--bg-soft); }
+.process-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; margin-top: 60px; }
+.process-steps::before { content: ''; position: absolute; top: 28px; left: 10%; right: 10%; height: 2px; background: linear-gradient(90deg, #3fa8d5, #2ec8a8, #58e07c); z-index: 0; }
+.process-step { text-align: center; position: relative; z-index: 1; padding: 0 16px; }
+.step-dot { width: 56px; height: 56px; border-radius: 50%; background: #fff; border: 2px solid var(--border); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 1.3rem; box-shadow: var(--card-shadow); transition: border-color 0.2s; }
+.process-step:hover .step-dot { border-color: var(--accent-solid); }
+.step-num { font-family: 'Bebas Neue', sans-serif; font-size: 0.75rem; letter-spacing: 0.1em; background: var(--accent-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 6px; }
+.step-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text); margin-bottom: 6px; }
+.step-desc { font-size: 0.78rem; color: var(--text-muted); line-height: 1.55; }
+
+.categories-section { background: var(--bg); }
+.categories-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 48px; }
+.cat-pill { background: var(--bg-soft); border: 1px solid var(--border); border-radius: 10px; padding: 20px 18px; text-align: center; transition: border-color 0.2s, transform 0.2s; cursor: default; }
+.cat-pill:hover { border-color: var(--accent-solid); transform: translateY(-2px); }
+.cat-pill .cat-emoji { font-size: 1.6rem; margin-bottom: 8px; }
+.cat-pill .cat-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-mid); }
+
+@media (max-width: 900px) {
+  .services-full-grid { grid-template-columns: 1fr; }
+  .process-steps { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .process-steps::before { display: none; }
+  .categories-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .process-steps { grid-template-columns: 1fr; gap: 20px; }
+  .categories-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .cat-pill { padding: 14px 12px; }
+  .service-card-top { padding: 24px 20px 18px; }
+  .service-card-bottom { padding: 16px 20px 20px; }
+}
+</style>
+</head>
+<body data-page="services" class="page-body">
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-orb"></div>
+  <div class="page-hero-inner">
+    <div class="page-hero-eyebrow">What We Do</div>
+    <h1>Manufacturing<br>Services</h1>
+    <p class="page-hero-sub">End-to-end contract development and manufacturing for sports nutrition and nutraceutical brands — from first concept to finished product, under one roof.</p>
+  </div>
+</div>
+
+<!-- ALL SERVICES -->
+<section>
+  <div class="section-inner">
+    <div class="section-label">Our Capabilities</div>
+    <h2 style="margin-bottom:48px;">Everything Your<br>Brand Needs</h2>
+    <div class="services-full-grid">
+
+      <div class="service-detail-card fade-up">
+        <div class="service-card-top">
+          <div class="card-icon">🏷️</div>
+          <h3>Private Label</h3>
+          <p>Launch your brand fast with our extensive library of proven, market-tested formulations. Choose from hundreds of ready-to-brand products across every major supplement category — just add your logo, label, and vision.</p>
+          <span class="card-tag">Turnkey Ready</span>
+        </div>
+        <div class="service-card-bottom">
+          <h4>Includes</h4>
+          <ul>
+            <li>Access to 100+ proven formulas</li>
+            <li>Custom label & packaging design support</li>
+            <li>Low minimum order quantities</li>
+            <li>Fast 3–6 week lead times</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-detail-card fade-up" style="transition-delay:.08s">
+        <div class="service-card-top">
+          <div class="card-icon">⚗️</div>
+          <h3>Custom Formulation</h3>
+          <p>Have a unique concept or differentiated ingredient stack? Our in-house R&D scientists build bespoke formulations from the ground up — custom flavor systems, novel combinations, and fully proprietary products made to your exact specification.</p>
+          <span class="card-tag">Your Vision</span>
+        </div>
+        <div class="service-card-bottom">
+          <h4>Includes</h4>
+          <ul>
+            <li>Dedicated R&D scientist assigned to your project</li>
+            <li>Full ingredient sourcing & vetting</li>
+            <li>Prototype development & iteration</li>
+            <li>Stability & solubility testing</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-detail-card fade-up" style="transition-delay:.16s">
+        <div class="service-card-top">
+          <div class="card-icon">🏭</div>
+          <h3>CDMO Services</h3>
+          <p>Full-spectrum contract development and manufacturing organization support. We manage the entire product lifecycle — from regulatory strategy and documentation to full-scale manufacturing, packaging, and logistics coordination.</p>
+          <span class="card-tag">Full Lifecycle</span>
+        </div>
+        <div class="service-card-bottom">
+          <h4>Includes</h4>
+          <ul>
+            <li>Regulatory documentation & compliance</li>
+            <li>Scale-up from R&D to production</li>
+            <li>Full batch records & COA generation</li>
+            <li>Third-party testing coordination</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-detail-card fade-up" style="transition-delay:.24s">
+        <div class="service-card-top">
+          <div class="card-icon">🧪</div>
+          <h3>RTM Powder Blending</h3>
+          <p>State-of-the-art ready-to-mix powder manufacturing with precise micro-dosing technology and rigorous homogeneity testing. We produce powders across all sports nutrition categories with exceptional consistency batch to batch.</p>
+          <span class="card-tag">Sports Nutrition</span>
+        </div>
+        <div class="service-card-bottom">
+          <h4>Categories</h4>
+          <ul>
+            <li>Pre-workout & energy blends</li>
+            <li>Protein & amino acid formulas</li>
+            <li>Recovery & hydration products</li>
+            <li>Nootropic & focus stacks</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-detail-card fade-up" style="transition-delay:.32s">
+        <div class="service-card-top">
+          <div class="card-icon">💊</div>
+          <h3>Capsule Manufacturing</h3>
+          <p>Precision capsule filling with multi-point QC checkpoints at every stage. We work with veggie, gelatin, and specialty capsule formats to deliver nutraceutical and supplement products that meet the highest standards of potency and uniformity.</p>
+          <span class="card-tag">Nutraceuticals</span>
+        </div>
+        <div class="service-card-bottom">
+          <h4>Formats</h4>
+          <ul>
+            <li>Vegetarian / vegan capsules</li>
+            <li>Gelatin capsules</li>
+            <li>Delayed-release formats</li>
+            <li>Multi-ingredient stacks</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-detail-card fade-up" style="transition-delay:.40s">
+        <div class="service-card-top">
+          <div class="card-icon">🍋</div>
+          <h3>In-House Flavor Development</h3>
+          <p>Our flavor scientists develop proprietary, best-in-class taste profiles exclusively for your products. Every flavor is built in-house — no outsourced flavor houses — giving you truly unique, shelf-winning products your customers will come back for.</p>
+          <span class="card-tag">Taste Innovation</span>
+        </div>
+        <div class="service-card-bottom">
+          <h4>Capabilities</h4>
+          <ul>
+            <li>Proprietary flavor system development</li>
+            <li>Masking of bitter / metallic notes</li>
+            <li>Natural & artificial flavor options</li>
+            <li>Flavor library available for private label</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- PRODUCT CATEGORIES -->
+<section class="categories-section">
+  <div class="section-inner">
+    <div class="section-label">Product Categories</div>
+    <h2>What We Manufacture</h2>
+    <p style="color:var(--text-muted);max-width:560px;line-height:1.8;">From high-stimulant pre-workouts to gentle wellness formulas, our team has deep expertise across every major segment of sports nutrition and nutraceuticals.</p>
+    <div class="categories-grid">
+      <div class="cat-pill fade-up"><div class="cat-emoji">⚡</div><div class="cat-name">Pre-Workout</div></div>
+      <div class="cat-pill fade-up" style="transition-delay:.05s"><div class="cat-emoji">💪</div><div class="cat-name">Protein Blends</div></div>
+      <div class="cat-pill fade-up" style="transition-delay:.1s"><div class="cat-emoji">💧</div><div class="cat-name">Hydration & Electrolytes</div></div>
+      <div class="cat-pill fade-up" style="transition-delay:.15s"><div class="cat-emoji">🔄</div><div class="cat-name">Recovery Formulas</div></div>
+      <div class="cat-pill fade-up" style="transition-delay:.2s"><div class="cat-emoji">🧠</div><div class="cat-name">Nootropics / Focus</div></div>
+      <div class="cat-pill fade-up" style="transition-delay:.25s"><div class="cat-emoji">🌿</div><div class="cat-name">Wellness & Adaptogens</div></div>
+      <div class="cat-pill fade-up" style="transition-delay:.3s"><div class="cat-emoji">🔥</div><div class="cat-name">Weight Management</div></div>
+      <div class="cat-pill fade-up" style="transition-delay:.35s"><div class="cat-emoji">🦴</div><div class="cat-name">Joint & Bone Health</div></div>
+      <div class="cat-pill fade-up" style="transition-delay:.4s"><div class="cat-emoji">😴</div><div class="cat-name">Sleep & Recovery</div></div>
+      <div class="cat-pill fade-up" style="transition-delay:.45s"><div class="cat-emoji">🧬</div><div class="cat-name">Amino Acids / EAAs</div></div>
+      <div class="cat-pill fade-up" style="transition-delay:.5s"><div class="cat-emoji">🩸</div><div class="cat-name">Greens & Superfoods</div></div>
+      <div class="cat-pill fade-up" style="transition-delay:.55s"><div class="cat-emoji">💊</div><div class="cat-name">Vitamins & Minerals</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- PROCESS -->
+<section class="process-section">
+  <div class="section-inner">
+    <div class="section-label">How It Works</div>
+    <h2>Our Process</h2>
+    <p style="color:var(--text-muted);max-width:520px;line-height:1.8;">From your first inquiry to product on shelf — a transparent, collaborative process every step of the way.</p>
+    <div class="process-steps">
+      <div class="process-step fade-up">
+        <div class="step-dot">🤝</div>
+        <div class="step-num">01</div>
+        <div class="step-title">Discovery</div>
+        <div class="step-desc">We learn about your brand, goals, target market, and product vision.</div>
+      </div>
+      <div class="process-step fade-up" style="transition-delay:.1s">
+        <div class="step-dot">⚗️</div>
+        <div class="step-num">02</div>
+        <div class="step-title">Formulation</div>
+        <div class="step-desc">R&D team develops and refines the formula with sample iterations.</div>
+      </div>
+      <div class="process-step fade-up" style="transition-delay:.2s">
+        <div class="step-dot">✅</div>
+        <div class="step-num">03</div>
+        <div class="step-title">Approval</div>
+        <div class="step-desc">You review and approve the formula, flavor, and label artwork.</div>
+      </div>
+      <div class="process-step fade-up" style="transition-delay:.3s">
+        <div class="step-dot">🏭</div>
+        <div class="step-num">04</div>
+        <div class="step-title">Production</div>
+        <div class="step-desc">Full-scale manufacturing in our cGMP-certified facility with QC checks.</div>
+      </div>
+      <div class="process-step fade-up" style="transition-delay:.4s">
+        <div class="step-dot">📦</div>
+        <div class="step-num">05</div>
+        <div class="step-title">Delivery</div>
+        <div class="step-desc">Finished product shipped with full COA documentation and batch records.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- CTA -->
+<div class="cta-strip">
+  <div class="cta-orb"></div>
+  <h2>Ready to Get Started?</h2>
+  <p>Tell us about your project and our team will put together a customized manufacturing proposal.</p>
+  <a href="contact.html" class="btn-primary">Request a Quote</a>
+</div>
+
+<script src="shared.js"></script>
+</body>
+</html>

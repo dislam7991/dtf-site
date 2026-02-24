@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DTF Insights | Supplement Formulation & Industry Knowledge</title>
+<meta name="description" content="DTF Insights — formulation science, regulatory guidance, flavor innovation, and sports nutrition market trends from the Dynamic Technical Formulations team.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dynamic Technical Formulations">
+<meta property="og:title" content="DTF Insights | Supplement Formulation & Industry Knowledge">
+<meta property="og:description" content="DTF Insights — formulation science, regulatory guidance, flavor innovation, and sports nutrition market trends from the Dynamic Technical Formulations team.">
+<meta property="og:url" content="https://dynamictechnicalformulations.com/blog.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DTF Insights | Supplement Formulation & Industry Knowledge">
+<meta name="twitter:description" content="DTF Insights — formulation science, regulatory guidance, flavor innovation, and sports nutrition market trends from the Dynamic Technical Formulations team.">
+<link rel="icon" href="DTF-logo-mono.png" type="image/png">
+<link rel="stylesheet" href="style.css">
+<style>
+.blog-layout { display: grid; grid-template-columns: 1fr 320px; gap: 60px; align-items: start; }
+
+/* featured post */
+.post-featured { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 16px; overflow: hidden; box-shadow: var(--card-shadow); margin-bottom: 32px; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; }
+.post-featured:hover { transform: translateY(-4px); box-shadow: var(--card-shadow-hover); }
+.post-featured-img { width: 100%; height: 320px; object-fit: cover; display: block; }
+.post-featured-body { padding: 36px; }
+.post-meta { font-size: 0.64rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent-solid); margin-bottom: 12px; display: flex; gap: 12px; align-items: center; }
+.post-meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--border); }
+.post-featured-body h2 { font-size: clamp(1.6rem,3vw,2.4rem); margin-bottom: 14px; }
+.post-featured-body p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 24px; }
+
+/* post grid */
+.posts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.post-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 14px; overflow: hidden; box-shadow: var(--card-shadow); cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; }
+.post-card:hover { transform: translateY(-4px); box-shadow: var(--card-shadow-hover); }
+.post-card-img { width: 100%; height: 160px; object-fit: cover; display: block; }
+.post-card-body { padding: 22px; }
+.post-card-body .post-meta { margin-bottom: 8px; }
+.post-card-body h3 { font-size: 1rem; margin-bottom: 8px; line-height: 1.3; }
+.post-card-body p { font-size: 0.83rem; color: var(--text-muted); line-height: 1.65; }
+
+/* sidebar */
+.blog-sidebar { position: sticky; top: 90px; }
+.sidebar-widget { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 14px; padding: 28px; box-shadow: var(--card-shadow); margin-bottom: 20px; }
+.sidebar-widget h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text); margin-bottom: 18px; border-bottom: 1px solid var(--border-light); padding-bottom: 12px; }
+.category-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.category-list li a { display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: var(--text-muted); font-size: 0.85rem; padding: 6px 0; border-bottom: 1px solid var(--border-light); transition: color 0.2s; }
+.category-list li a:hover { color: var(--accent-solid); }
+.cat-count { font-size: 0.7rem; background: var(--bg-soft); border: 1px solid var(--border); padding: 2px 7px; border-radius: 10px; color: var(--text-muted); }
+.recent-posts { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+.recent-posts li { display: flex; gap: 12px; align-items: flex-start; }
+.recent-post-icon { width: 38px; height: 38px; background: var(--bg-soft); border: 1px solid var(--border-light); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+.recent-post-text a { text-decoration: none; color: var(--text); font-size: 0.83rem; font-weight: 500; line-height: 1.4; transition: color 0.2s; }
+.recent-post-text a:hover { color: var(--accent-solid); }
+.recent-post-date { font-size: 0.68rem; color: var(--text-muted); margin-top: 2px; }
+.newsletter-form input { width: 100%; background: var(--bg); border: 1.5px solid var(--border); border-radius: 6px; padding: 10px 12px; color: var(--text); font-family: 'Barlow', sans-serif; font-size: 0.88rem; outline: none; margin-bottom: 10px; }
+.newsletter-form input:focus { border-color: var(--accent-solid); }
+.newsletter-form button { width: 100%; background: var(--accent-grad); color: #fff; padding: 11px; font-family: 'Barlow Condensed', sans-serif; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; border: none; border-radius: 5px; cursor: pointer; transition: opacity 0.2s; }
+.newsletter-form button:hover { opacity: 0.9; }
+.newsletter-desc { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 14px; line-height: 1.6; }
+
+@media (max-width: 900px) {
+  .blog-layout { grid-template-columns: 1fr; }
+  .posts-grid { grid-template-columns: 1fr; }
+  .blog-sidebar { position: static; }
+}
+@media (max-width: 600px) {
+  .post-featured-body { padding: 24px; }
+  .post-featured-img { height: 200px; }
+  .post-card-body { padding: 16px; }
+}
+</style>
+</head>
+<body data-page="blog" class="page-body">
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-orb"></div>
+  <div class="page-hero-inner">
+    <div class="page-hero-eyebrow">Knowledge Hub</div>
+    <h1>DTF Insights</h1>
+    <p class="page-hero-sub">Industry expertise, formulation science, regulatory guidance, and market trends — straight from the DTF team.</p>
+  </div>
+</div>
+
+<section>
+  <div class="section-inner">
+    <div class="blog-layout">
+      <!-- MAIN CONTENT -->
+      <div>
+        <!-- Featured post -->
+        <div class="post-featured fade-up">
+          <img class="post-featured-img" src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=1200&q=80&fit=crop" alt="Pre-workout formulation" loading="lazy">
+          <div class="post-featured-body">
+            <div class="post-meta">
+              <span>Formulation Science</span>
+              <span class="dot"></span>
+              <span>8 min read</span>
+              <span class="dot"></span>
+              <span>Jan 2025</span>
+            </div>
+            <h2>The Science Behind Elite Pre-Workout Formulations</h2>
+            <p>What separates a best-selling pre-workout from a forgettable one? It comes down to ingredient synergy, precise dosing, and solubility engineering. In this deep-dive, our R&D team breaks down the pharmacokinetics behind high-performance formulas — from caffeine titration and beta-alanine loading protocols to novel ergogenic compounds gaining traction in the market.</p>
+            <a href="#" class="btn-primary" style="font-size:0.82rem;padding:11px 28px;">Read Article →</a>
+          </div>
+        </div>
+
+        <!-- Post grid -->
+        <div class="posts-grid">
+          <div class="post-card fade-up">
+            <img class="post-card-img" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80&fit=crop" alt="Lab compliance" loading="lazy">
+            <div class="post-card-body">
+              <div class="post-meta">Regulatory <span class="dot"></span> 5 min read</div>
+              <h3>Navigating cGMP Compliance: A Brand Owner's Guide</h3>
+              <p>What FDA regulations actually require — and why your choice of manufacturer is your first line of defense.</p>
+            </div>
+          </div>
+          <div class="post-card fade-up" style="transition-delay:.08s">
+            <img class="post-card-img" src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80&fit=crop" alt="Flavor development" loading="lazy">
+            <div class="post-card-body">
+              <div class="post-meta">Innovation <span class="dot"></span> 6 min read</div>
+              <h3>Flavor as a Competitive Moat: Why Taste Wins the Shelf</h3>
+              <p>In-house flavor development isn't just a nice-to-have — it's the single biggest driver of repeat purchase in supplements.</p>
+            </div>
+          </div>
+          <div class="post-card fade-up" style="transition-delay:.16s">
+            <img class="post-card-img" src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&q=80&fit=crop" alt="Protein powder" loading="lazy">
+            <div class="post-card-body">
+              <div class="post-meta">Ingredients <span class="dot"></span> 4 min read</div>
+              <h3>Protein Blending: The Art of Digestibility & Amino Profiles</h3>
+              <p>How multi-source protein blending creates superior amino acid delivery curves compared to single-source formulas.</p>
+            </div>
+          </div>
+          <div class="post-card fade-up" style="transition-delay:.24s">
+            <img class="post-card-img" src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80&fit=crop" alt="Sports performance" loading="lazy">
+            <div class="post-card-body">
+              <div class="post-meta">Market Trends <span class="dot"></span> 5 min read</div>
+              <h3>2025 Sports Nutrition Trends: What Brands Must Know</h3>
+              <p>From adaptogens to electrolyte sophistication — the formulation trends reshaping the sports nutrition category this year.</p>
+            </div>
+          </div>
+          <div class="post-card fade-up" style="transition-delay:.32s">
+            <img class="post-card-img" src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&q=80&fit=crop" alt="Capsules manufacturing" loading="lazy">
+            <div class="post-card-body">
+              <div class="post-meta">Manufacturing <span class="dot"></span> 4 min read</div>
+              <h3>Choosing the Right Capsule Format for Your Product</h3>
+              <p>Gelatin vs. veggie caps, delayed-release vs. standard fill — a practical guide to capsule selection for supplement brands.</p>
+            </div>
+          </div>
+          <div class="post-card fade-up" style="transition-delay:.40s">
+            <img class="post-card-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80&fit=crop" alt="Brand strategy" loading="lazy">
+            <div class="post-card-body">
+              <div class="post-meta">Business <span class="dot"></span> 6 min read</div>
+              <h3>Private Label vs. Custom Formula: Which Is Right for Your Brand?</h3>
+              <p>A frank breakdown of when to launch fast with private label versus investing in custom formulation for long-term brand equity.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="blog-sidebar">
+        <div class="sidebar-widget fade-up">
+          <h4>Categories</h4>
+          <ul class="category-list">
+            <li><a href="#">Formulation Science <span class="cat-count">8</span></a></li>
+            <li><a href="#">Regulatory & Compliance <span class="cat-count">5</span></a></li>
+            <li><a href="#">Flavor Innovation <span class="cat-count">4</span></a></li>
+            <li><a href="#">Ingredients & Research <span class="cat-count">7</span></a></li>
+            <li><a href="#">Market Trends <span class="cat-count">6</span></a></li>
+            <li><a href="#">Manufacturing <span class="cat-count">5</span></a></li>
+            <li><a href="#">Brand Strategy <span class="cat-count">4</span></a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-widget fade-up">
+          <h4>Recent Posts</h4>
+          <ul class="recent-posts">
+            <li>
+              <div class="recent-post-icon">🧬</div>
+              <div class="recent-post-text">
+                <a href="#">The Science Behind Elite Pre-Workout Formulations</a>
+                <div class="recent-post-date">January 2025</div>
+              </div>
+            </li>
+            <li>
+              <div class="recent-post-icon">⚖️</div>
+              <div class="recent-post-text">
+                <a href="#">Navigating cGMP Compliance: A Brand Owner's Guide</a>
+                <div class="recent-post-date">December 2024</div>
+              </div>
+            </li>
+            <li>
+              <div class="recent-post-icon">🍓</div>
+              <div class="recent-post-text">
+                <a href="#">Flavor as a Competitive Moat</a>
+                <div class="recent-post-date">November 2024</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sidebar-widget fade-up">
+          <h4>Stay Informed</h4>
+          <p class="newsletter-desc">Get the latest formulation insights and industry news delivered to your inbox.</p>
+          <form class="newsletter-form" name="newsletter" method="POST" netlify>
+            <input type="hidden" name="form-name" value="newsletter">
+            <input type="email" name="email" placeholder="Your email address">
+            <button type="submit" class="form-submit">Subscribe →</button>
+          </form>
+        </div>
+
+        <div class="sidebar-widget fade-up" style="background:var(--text);border-color:rgba(255,255,255,0.08);">
+          <h4 style="color:#fff;border-color:rgba(255,255,255,0.1);">Ready to Manufacture?</h4>
+          <p style="font-size:0.83rem;color:rgba(255,255,255,0.5);line-height:1.65;margin-bottom:16px;">Have a product idea? Our team is ready to help you bring it to life.</p>
+          <a href="contact.html" class="btn-primary" style="width:100%;display:block;text-align:center;padding:11px;">Get a Quote →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<div class="cta-strip">
+  <div class="cta-orb"></div>
+  <h2>Want Expert Guidance on Your Formula?</h2>
+  <p>Our team goes beyond manufacturing — we're here to help you build better products.</p>
+  <a href="contact.html" class="btn-primary">Talk to Our Team</a>
+</div>
+
+<script src="shared.js"></script>
+</body>
+</html>

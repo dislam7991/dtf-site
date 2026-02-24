@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Technical Formulations | CDMO & Supplement Manufacturing</title>
+<meta name="description" content="DTF is a U.S.-based CDMO and supplement manufacturer specializing in sports nutrition. Private label, custom formulation, RTM powders, and capsules — with 3–6 week lead times.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dynamic Technical Formulations">
+<meta property="og:title" content="Dynamic Technical Formulations | CDMO & Supplement Manufacturing">
+<meta property="og:description" content="DTF is a U.S.-based CDMO and supplement manufacturer specializing in sports nutrition. Private label, custom formulation, RTM powders, and capsules — with 3–6 week lead times.">
+<meta property="og:url" content="https://dynamictechnicalformulations.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dynamic Technical Formulations | CDMO & Supplement Manufacturing">
+<meta name="twitter:description" content="DTF is a U.S.-based CDMO and supplement manufacturer specializing in sports nutrition. Private label, custom formulation, RTM powders, and capsules — with 3–6 week lead times.">
+<link rel="icon" href="DTF-logo-mono.png" type="image/png">
+<link rel="stylesheet" href="style.css">
+<style>
+/* ── HOME-SPECIFIC ── */
+#hero {
+  position: relative; z-index: 1; min-height: 100vh;
+  display: flex; align-items: center;
+  padding: 120px 60px 100px; background: var(--bg); overflow: hidden;
+}
+.hero-orb-1 { position: absolute; top: -200px; right: -150px; width: 700px; height: 700px; border-radius: 50%; background: radial-gradient(circle, rgba(63,168,213,0.06) 0%, transparent 65%); pointer-events: none; }
+.hero-orb-2 { position: absolute; bottom: -80px; left: 15%; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(88,224,124,0.05) 0%, transparent 65%); pointer-events: none; }
+
+.hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 80px; align-items: center; width: 100%; max-width: 1280px; margin: 0 auto; position: relative; z-index: 2; }
+
+.hero-eyebrow { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: var(--accent-solid); margin-bottom: 22px; display: flex; align-items: center; gap: 12px; }
+.hero-eyebrow::before { content: ''; display: block; width: 28px; height: 2px; background: var(--accent-grad); border-radius: 2px; }
+.hero-sub { font-size: 1.05rem; line-height: 1.8; color: var(--text-muted); max-width: 500px; margin-bottom: 44px; }
+.hero-actions { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+
+/* hero right logo card */
+.hero-right { position: relative; display: flex; justify-content: center; align-items: center; min-height: 400px; }
+.hero-logo-card { background: var(--card-bg); backdrop-filter: blur(20px); border: 1px solid var(--card-border); border-radius: 20px; padding: 52px 56px; box-shadow: var(--card-shadow); text-align: center; position: relative; z-index: 2; }
+.hero-dtf-svg { width: 180px; height: auto; margin-bottom: 18px; }
+.hero-tagline-text { font-family: 'Barlow Condensed', sans-serif; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; color: var(--text-muted); }
+.chip { position: absolute; background: #fff; border: 1px solid var(--border-light); border-radius: 10px; padding: 11px 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.09); z-index: 3; animation: chipFloat 5s ease-in-out infinite; }
+.chip:nth-child(2) { top: 10px; right: -20px; animation-delay: -1.5s; }
+.chip:nth-child(3) { bottom: 30px; left: -20px; animation-delay: -3s; }
+@keyframes chipFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-9px)} }
+.chip-label { font-size: 0.58rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 2px; }
+.chip-val { font-family: 'Bebas Neue', sans-serif; font-size: 1.35rem; line-height: 1; background: var(--accent-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+/* ── SERVICES PREVIEW ── */
+#services-preview { background: var(--bg); }
+.services-header { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: end; margin-bottom: 56px; }
+.services-desc { color: var(--text-muted); font-size: 1rem; line-height: 1.8; padding-top: 14px; }
+.services-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.see-all-row { margin-top: 40px; text-align: center; }
+
+/* ── PHOTOS ── */
+#facility { background: var(--bg-soft); }
+.facility-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 240px 240px; gap: 14px; }
+.facility-grid .photo-frame:first-child { grid-row: span 2; }
+.facility-caption { margin-top: 10px; font-size: 0.75rem; color: var(--text-muted); letter-spacing: 0.05em; text-align: center; }
+
+/* ── WHY STRIP ── */
+#why-strip { background: var(--bg); }
+.why-strip-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.why-list { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-top: 28px; }
+.why-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 0.93rem; color: var(--text-mid); line-height: 1.65; }
+.why-list li::before { content: ''; display: block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent-grad); margin-top: 7px; flex-shrink: 0; }
+.stats-stack { display: flex; flex-direction: column; gap: 14px; }
+
+/* ── CONTACT BOTTOM ── */
+#contact-home { background: var(--bg-soft); }
+.contact-home-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 80px; align-items: center; }
+.contact-left p { color: var(--text-muted); line-height: 1.8; margin-bottom: 28px; font-size: 0.98rem; }
+.contact-details { display: flex; flex-direction: column; gap: 14px; }
+.contact-row { display: flex; align-items: center; gap: 14px; font-size: 0.9rem; color: var(--text-mid); }
+.contact-icon { width: 36px; height: 36px; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+
+@media (max-width: 900px) {
+  #hero { padding: 100px 20px 60px; min-height: auto; }
+  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero-right { display: none; }
+  .services-header { grid-template-columns: 1fr; gap: 20px; }
+  .services-grid-3 { grid-template-columns: 1fr; }
+  .why-strip-grid { grid-template-columns: 1fr; gap: 40px; }
+  .contact-home-grid { grid-template-columns: 1fr; gap: 40px; }
+  .facility-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+  .facility-grid .photo-frame:first-child { grid-row: auto; grid-column: span 2; }
+}
+@media (max-width: 600px) {
+  #hero { padding: 80px 16px 48px; }
+  .hero-sub { font-size: 0.95rem; }
+  .hero-actions { flex-direction: column; width: 100%; }
+  .hero-actions .btn-primary, .hero-actions .btn-ghost { width: 100%; text-align: center; }
+  .facility-grid { grid-template-columns: 1fr; }
+  .facility-grid .photo-frame:first-child { grid-column: auto; }
+  .contact-row span { font-size: 0.82rem; word-break: break-word; }
+}
+</style>
+</head>
+<body data-page="index" class="page-body">
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-orb-1"></div>
+  <div class="hero-orb-2"></div>
+  <div class="hero-grid">
+    <div>
+      <div class="hero-eyebrow">CDMO &bull; Supplement Manufacturing</div>
+      <h1>From<br>Formulation<br>To Innovation</h1>
+      <p class="hero-sub">Your trusted contract development and manufacturing partner for sports nutrition and nutraceutical products. We turn your vision into shelf-ready formulas — with precision, speed, and science.</p>
+      <div class="hero-actions">
+        <a href="contact.html" class="btn-primary">Start a Project</a>
+        <a href="services.html" class="btn-ghost">Our Services</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-logo-card">
+        <img class="hero-dtf-svg" src="DTF-logo-mono.png" alt="DTF Logo">
+        <div class="hero-tagline-text">From Formulation to Innovation</div>
+      </div>
+      <div class="chip"><div class="chip-label">Certified</div><div class="chip-val">cGMP</div></div>
+      <div class="chip"><div class="chip-label">Specialty</div><div class="chip-val">RTM</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- SERVICES PREVIEW -->
+<section id="services-preview">
+  <div class="section-inner">
+    <div class="services-header">
+      <div>
+        <div class="section-label">What We Do</div>
+        <h2>Manufacturing<br>Solutions</h2>
+      </div>
+      <p class="services-desc">From private label launches to full CDMO support, we specialize in ready-to-mix powders and capsule supplements with in-house flavor development.</p>
+    </div>
+    <div class="services-grid-3">
+      <div class="card fade-up">
+        <div class="card-icon">🏷️</div>
+        <h3>Private Label</h3>
+        <p>Launch your brand fast with proven, high-performance formulations from our extensive ready-to-brand library.</p>
+        <span class="card-tag">Turnkey Ready</span>
+      </div>
+      <div class="card fade-up" style="transition-delay:.08s">
+        <div class="card-icon">⚗️</div>
+        <h3>Custom Formulation</h3>
+        <p>Bespoke formulations built from the ground up with our in-house R&D team — your concept, our expertise.</p>
+        <span class="card-tag">Your Vision</span>
+      </div>
+      <div class="card fade-up" style="transition-delay:.16s">
+        <div class="card-icon">🏭</div>
+        <h3>CDMO Services</h3>
+        <p>Full contract development and manufacturing: regulatory compliance, scale-up, blending, filling, and packaging.</p>
+        <span class="card-tag">Full Lifecycle</span>
+      </div>
+    </div>
+    <div class="see-all-row">
+      <a href="services.html" class="btn-ghost">View All Services →</a>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- FACILITY PHOTOS -->
+<section id="facility">
+  <div class="section-inner">
+    <div class="section-label">Our Facility</div>
+    <h2 style="margin-bottom:48px;">Built for Precision.<br>Designed for Scale.</h2>
+    <div class="facility-grid">
+      <div class="photo-frame" style="height:100%;">
+        <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=900&q=80&fit=crop" alt="Manufacturing facility floor" loading="lazy">
+      </div>
+      <div class="photo-frame"><img src="https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?w=600&q=80&fit=crop" alt="Lab equipment" loading="lazy"></div>
+      <div class="photo-frame"><img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=600&q=80&fit=crop" alt="Supplement capsules" loading="lazy"></div>
+      <div class="photo-frame"><img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=600&q=80&fit=crop" alt="Scientist at work" loading="lazy"></div>
+      <div class="photo-frame"><img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=600&q=80&fit=crop" alt="Powder formulation" loading="lazy"></div>
+    </div>
+    <p class="facility-caption">FDA-registered, cGMP-certified manufacturing facility — Alpharetta, GA</p>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- WHY DTF STRIP -->
+<section id="why-strip">
+  <div class="section-inner">
+    <div class="why-strip-grid">
+      <div>
+        <div class="section-label">Why DTF</div>
+        <h2>Your Growth<br>Is Our Formula</h2>
+        <p style="color:var(--text-muted);line-height:1.8;font-size:1rem;margin-top:4px;">We don't just manufacture — we become an extension of your brand. Deep category expertise, obsessive quality standards, and a team that moves at your speed.</p>
+        <ul class="why-list">
+          <li>In-house R&D, flavoring, and QA — zero outsourcing on critical processes</li>
+          <li>FDA-registered, cGMP-compliant facility — every batch</li>
+          <li>Low minimum order quantities to support brands at every stage</li>
+          <li>Transparent communication from first sample to final delivery</li>
+        </ul>
+        <div style="margin-top:32px;">
+          <a href="about.html" class="btn-ghost">About Us →</a>
+        </div>
+      </div>
+      <div class="stats-stack fade-up">
+        <div class="stat-card"><div class="stat-num">100+</div><div class="stat-text"><h4>Formulas in Portfolio</h4><p>Ready-to-launch across every major supplement category.</p></div></div>
+        <div class="stat-card"><div class="stat-num">3–6</div><div class="stat-text"><h4>Week Lead Times</h4><p>Concept to finished product — fastest turnarounds in the industry.</p></div></div>
+        <div class="stat-card"><div class="stat-num">360°</div><div class="stat-text"><h4>Turnkey Support</h4><p>Formulation, flavor, manufacturing, labeling, packaging — one roof.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- CONTACT CTA BOTTOM -->
+<section id="contact-home">
+  <div class="section-inner">
+    <div class="contact-home-grid">
+      <div class="contact-left">
+        <div class="section-label">Get In Touch</div>
+        <h2>Ready to Build<br>Something Great?</h2>
+        <p>Whether launching a new brand or scaling an existing one — our team is ready. Tell us about your project and we'll be in touch within one business day.</p>
+        <div class="contact-details">
+          <div class="contact-row"><div class="contact-icon">📧</div><span>info@dynamictechnicalformulations.com</span></div>
+          <div class="contact-row"><div class="contact-icon">📍</div><span>United States — Serving brands nationwide</span></div>
+          <div class="contact-row"><div class="contact-icon">⏱️</div><span>Response within 1 business day</span></div>
+        </div>
+      </div>
+      <form class="contact-form-card fade-up" name="contact-home" method="POST" netlify>
+        <input type="hidden" name="form-name" value="contact-home">
+        <div class="form-row">
+          <div class="form-group"><label>First Name</label><input type="text" name="first-name" placeholder="Jane"></div>
+          <div class="form-group"><label>Last Name</label><input type="text" name="last-name" placeholder="Smith"></div>
+        </div>
+        <div class="form-group"><label>Company</label><input type="text" name="company" placeholder="Your Brand Inc."></div>
+        <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="jane@yourbrand.com"></div>
+        <div class="form-group">
+          <label>Service Interest</label>
+          <select name="service">
+            <option value="" disabled selected>Select a service...</option>
+            <option>Private Label</option><option>Custom Formulation</option>
+            <option>CDMO / Full Contract Manufacturing</option>
+            <option>RTM Powder Blending</option><option>Capsule Manufacturing</option>
+            <option>Flavor Development</option><option>General Inquiry</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Tell Us About Your Project</label><textarea name="message" placeholder="Describe your concept, volume needs, timeline..."></textarea></div>
+        <button type="submit" class="form-submit">Send Inquiry →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script src="shared.js"></script>
+</body>
+</html>

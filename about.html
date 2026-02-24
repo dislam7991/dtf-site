@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About DTF | Science-Driven Supplement Manufacturing Partner</title>
+<meta name="description" content="Learn about Dynamic Technical Formulations — our mission, values, team, and FDA-registered, cGMP-certified manufacturing facility built for supplement brands.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dynamic Technical Formulations">
+<meta property="og:title" content="About DTF | Science-Driven Supplement Manufacturing Partner">
+<meta property="og:description" content="Learn about Dynamic Technical Formulations — our mission, values, team, and FDA-registered, cGMP-certified manufacturing facility built for supplement brands.">
+<meta property="og:url" content="https://dynamictechnicalformulations.com/about.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About DTF | Science-Driven Supplement Manufacturing Partner">
+<meta name="twitter:description" content="Learn about Dynamic Technical Formulations — our mission, values, team, and FDA-registered, cGMP-certified manufacturing facility built for supplement brands.">
+<link rel="icon" href="DTF-logo-mono.png" type="image/png">
+<link rel="stylesheet" href="style.css">
+<style>
+.about-story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.about-story-text p { color: var(--text-muted); line-height: 1.85; font-size: 0.97rem; margin-bottom: 20px; }
+
+.about-logo-card { background: var(--bg-soft); border: 1px solid var(--border); border-radius: 20px; padding: 52px 44px; text-align: center; box-shadow: var(--card-shadow); }
+.about-logo-card img { width: 200px; height: auto; margin-bottom: 32px; object-fit: contain; border-radius: 6px; }
+.pillars-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.pillar { background: var(--bg); border: 1px solid var(--border-light); border-radius: 8px; padding: 14px 10px; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: var(--text-muted); text-align: center; transition: border-color 0.2s, color 0.2s; }
+.pillar:hover { border-color: var(--accent-solid); color: var(--accent-solid); }
+
+.values-section { background: var(--bg-soft); }
+.values-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 48px; }
+.value-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 14px; padding: 32px 24px; text-align: center; box-shadow: var(--card-shadow); transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s; }
+.value-card:hover { transform: translateY(-4px); box-shadow: var(--card-shadow-hover); border-color: rgba(46,200,168,0.2); }
+.value-icon { font-size: 2rem; margin-bottom: 16px; }
+.value-card h3 { font-size: 1rem; margin-bottom: 10px; }
+.value-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.65; }
+
+.team-section { background: var(--bg); }
+.team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
+.team-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 14px; overflow: hidden; box-shadow: var(--card-shadow); }
+.team-photo { width: 100%; height: 220px; object-fit: cover; object-position: top; display: block; }
+.team-info { padding: 24px; }
+.team-info h3 { font-size: 1.05rem; margin-bottom: 4px; }
+.team-role { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent-solid); margin-bottom: 10px; }
+.team-info p { font-size: 0.83rem; color: var(--text-muted); line-height: 1.6; }
+
+.certs-section { background: var(--bg-soft); }
+.certs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
+.cert-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 28px 24px; display: flex; align-items: center; gap: 18px; box-shadow: var(--card-shadow); transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s; }
+.cert-card:hover { transform: translateY(-3px); box-shadow: var(--card-shadow-hover); border-color: rgba(46,200,168,0.2); }
+.cert-badge { width: 52px; height: 52px; border-radius: 10px; background: linear-gradient(135deg, rgba(63,168,213,0.1), rgba(88,224,124,0.1)); border: 1px solid rgba(46,200,168,0.2); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; }
+.cert-text h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+.cert-text p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
+
+.about-facility-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+
+@media (max-width: 900px) {
+  .about-story-grid { grid-template-columns: 1fr; }
+  .values-grid { grid-template-columns: repeat(2, 1fr); }
+  .team-grid, .certs-grid { grid-template-columns: 1fr; }
+  .about-facility-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .values-grid { grid-template-columns: 1fr; }
+  .about-logo-card { padding: 32px 20px; }
+  .about-logo-card img { width: 150px; }
+  .pillars-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .pillar { padding: 10px 6px; font-size: 0.64rem; }
+  .value-card { padding: 24px 18px; }
+}
+</style>
+</head>
+<body data-page="about" class="page-body">
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-orb"></div>
+  <div class="page-hero-inner">
+    <div class="page-hero-eyebrow">Who We Are</div>
+    <h1>Science-Driven.<br>Partner-Focused.</h1>
+    <p class="page-hero-sub">Dynamic Technical Formulations was built by industry veterans with one mission: to be the manufacturing partner that helps supplement brands truly win.</p>
+  </div>
+</div>
+
+<!-- OUR STORY -->
+<section>
+  <div class="section-inner">
+    <div class="about-story-grid">
+      <div class="fade-up">
+        <div class="about-logo-card">
+          <img src="Logo-color-2.jpg" alt="DTF Logo" loading="lazy">
+          <div class="pillars-grid">
+            <div class="pillar">Precision</div>
+            <div class="pillar">Innovation</div>
+            <div class="pillar">Transparency</div>
+            <div class="pillar">Partnership</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-story-text">
+        <div class="section-label">Our Story</div>
+        <h2>Built on a<br>Simple Principle</h2>
+        <p>Dynamic Technical Formulations (DTF) was founded on a simple principle: supplement brands deserve a manufacturing partner as passionate about their product as they are.</p>
+        <p>We saw too many brands struggle with manufacturers who treated them as just another order number — slow communication, rigid processes, and zero investment in product quality. We built DTF to be the opposite.</p>
+        <p>Our team of formulators, flavor scientists, and manufacturing specialists bring decades of combined expertise to every project. Whether you're launching your first SKU or scaling an established line, we show up with the same level of dedication and rigor.</p>
+        <p>We thrive at the intersection of clinical precision and market innovation — where great science meets great business outcomes for our brand partners.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- VALUES -->
+<section class="values-section">
+  <div class="section-inner">
+    <div class="section-label">What We Stand For</div>
+    <h2>Our Core Values</h2>
+    <p style="color:var(--text-muted);max-width:500px;line-height:1.8;">Every decision we make, every formula we develop, every batch we produce — guided by these four principles.</p>
+    <div class="values-grid">
+      <div class="value-card fade-up">
+        <div class="value-icon">🔬</div>
+        <h3>Precision</h3>
+        <p>Exact dosing, rigorous testing, and meticulous quality control at every stage of production. No shortcuts, ever.</p>
+      </div>
+      <div class="value-card fade-up" style="transition-delay:.08s">
+        <div class="value-icon">💡</div>
+        <h3>Innovation</h3>
+        <p>We stay ahead of the science — constantly exploring new ingredients, formats, and flavor systems so your products lead the market.</p>
+      </div>
+      <div class="value-card fade-up" style="transition-delay:.16s">
+        <div class="value-icon">🤝</div>
+        <h3>Partnership</h3>
+        <p>We treat every brand as a long-term partner. Your success is our success — full stop. We're invested in your growth.</p>
+      </div>
+      <div class="value-card fade-up" style="transition-delay:.24s">
+        <div class="value-icon">📋</div>
+        <h3>Transparency</h3>
+        <p>Open communication at every step — from formulation updates to production timelines. You'll always know exactly where things stand.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- TEAM -->
+<section class="team-section">
+  <div class="section-inner">
+    <div class="section-label">The People Behind DTF</div>
+    <h2>Expert Team,<br>Real Results</h2>
+    <p style="color:var(--text-muted);max-width:500px;line-height:1.8;">Decades of combined experience in supplement formulation, flavor science, manufacturing, and regulatory compliance.</p>
+    <div class="team-grid">
+      <div class="team-card fade-up">
+        <img class="team-photo" src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=600&q=80&fit=crop&crop=top" alt="Daniel Islam" loading="lazy">
+        <div class="team-info">
+          <h3>Daniel Islam</h3>
+          <div class="team-role">Head of R&D & Flavor Development</div>
+          <p>Leads custom formulation development with deep expertise in sports nutrition chemistry, bioavailability, and ingredient synergy. Designs and engineers proprietary, in-house flavor systems that make complex supplements taste exceptional, from concept through production-ready execution. Daniel works closely with operations and quality leadership to ensure every formulation is optimized for consistency, compliance, and efficiency at scale. His approach is detail-driven, iterative, and innovation-focused, with a strong emphasis on ingredient synergy, bioavailability, and consumer experience.</p>
+        </div>
+      </div>
+      <div class="team-card fade-up" style="transition-delay:.1s">
+        <img class="team-photo" src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=600&q=80&fit=crop&crop=top" alt="James Lemay" loading="lazy">
+        <div class="team-info">
+          <h3>James Lemay</h3>
+          <div class="team-role">Director of Quality & Operations</div>
+          <p>Oversees all production operations, cGMP compliance, and quality assurance. Ensures every batch is manufactured with precision, consistency, and the highest standards of safety and quality. James works in close collaboration with the R&D team to align formulation intent with real-world manufacturing requirements, helping bridge innovation with operational precision. His leadership ensures the company delivers dependable, high-quality products at scale.</p>
+        </div>
+      </div>
+      <div class="team-card fade-up" style="transition-delay:.2s">
+        <img class="team-photo" src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80&fit=crop&crop=top"  alt="Suma Chacko" loading="lazy">
+        <div class="team-info">
+          <h3>Suma Chacko</h3>
+          <div class="team-role">Capsule Manufacturing Associate</div>
+          <p>Designs and refines excipient systems for capsule formulations, supporting consistent fills, efficient encapsulation, and scalable manufacturing performance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- FACILITY PHOTOS -->
+<section style="background:var(--bg-soft);">
+  <div class="section-inner">
+    <div class="section-label">Our Facility</div>
+    <h2>Where Science<br>Meets Scale</h2>
+    <p style="color:var(--text-muted);max-width:520px;line-height:1.8;margin-bottom:48px;">Our Alpharetta, GA manufacturing facility is FDA-registered and fully cGMP-certified — purpose-built to produce high-quality supplement products at any scale.</p>
+    <div class="about-facility-grid">
+      <div class="photo-frame" style="height:280px;"><img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800&q=80&fit=crop" alt="Facility floor" loading="lazy"></div>
+      <div class="photo-frame" style="height:280px;"><img src="https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?w=800&q=80&fit=crop" alt="Lab testing" loading="lazy"></div>
+      <div class="photo-frame" style="height:280px;"><img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&q=80&fit=crop" alt="Capsules" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- CERTIFICATIONS -->
+<section class="certs-section">
+  <div class="section-inner">
+    <div class="section-label">Compliance & Quality</div>
+    <h2>Certifications &<br>Standards</h2>
+    <div class="certs-grid">
+      <div class="cert-card fade-up">
+        <div class="cert-badge">🏛️</div>
+        <div class="cert-text"><h4>FDA Registered</h4><p>Our facility is fully registered with the U.S. Food & Drug Administration.</p></div>
+      </div>
+      <div class="cert-card fade-up" style="transition-delay:.08s">
+        <div class="cert-badge">✅</div>
+        <div class="cert-text"><h4>cGMP Certified</h4><p>Current Good Manufacturing Practices compliance — every batch, every product, every time.</p></div>
+      </div>
+      <div class="cert-card fade-up" style="transition-delay:.16s">
+        <div class="cert-badge">🧪</div>
+        <div class="cert-text"><h4>Third-Party Testing</h4><p>All products available with independent third-party lab testing and certificates of analysis.</p></div>
+      </div>
+      <div class="cert-card fade-up" style="transition-delay:.24s">
+        <div class="cert-badge">🛡️</div>
+        <div class="cert-text"><h4>NSF Certified</h4><p>NSF International certification ensuring products meet strict standards for quality, safety, and label accuracy.</p></div>
+      </div>
+      <div class="cert-card fade-up" style="transition-delay:.32s">
+        <div class="cert-badge">☪️</div>
+        <div class="cert-text"><h4>Halal Certified</h4><p>Halal-certified manufacturing processes and ingredient sourcing to meet the needs of the global Halal market.</p></div>
+      </div>
+      <div class="cert-card fade-up" style="transition-delay:.40s">
+        <div class="cert-badge">✡️</div>
+        <div class="cert-text"><h4>Kosher Certified</h4><p>Kosher certification ensuring compliance with dietary laws — expanding your product's reach to Kosher consumers.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- CTA -->
+<div class="cta-strip">
+  <div class="cta-orb"></div>
+  <h2>Let's Build Together</h2>
+  <p>Whether you're a startup or an established brand, we're ready to be your manufacturing partner.</p>
+  <a href="contact.html" class="btn-primary">Start the Conversation</a>
+</div>
+
+<script src="shared.js"></script>
+</body>
+</html>
