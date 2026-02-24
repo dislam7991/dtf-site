@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
   // Netlify AJAX form submission
-  document.querySelectorAll('form[netlify]').forEach(form => {
+  document.querySelectorAll('form[data-netlify]').forEach(form => {
     form.addEventListener('submit', function(e) {
       e.preventDefault();
       const btn = form.querySelector('button[type="submit"]');
@@ -96,10 +96,15 @@ document.addEventListener('DOMContentLoaded', () => {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(new FormData(form)).toString()
       })
-      .then(() => {
-        if (btn) btn.textContent = '✓ Sent!';
-        form.reset();
-        setTimeout(() => { if (btn) { btn.textContent = orig; btn.disabled = false; } }, 4000);
+      .then(res => {
+        if (res.ok) {
+          if (btn) btn.textContent = '✓ Sent!';
+          form.reset();
+          setTimeout(() => { if (btn) { btn.textContent = orig; btn.disabled = false; } }, 4000);
+        } else {
+          if (btn) btn.textContent = 'Error — please try again';
+          setTimeout(() => { if (btn) { btn.textContent = orig; btn.disabled = false; } }, 4000);
+        }
       })
       .catch(() => {
         if (btn) btn.textContent = 'Error — please try again';
