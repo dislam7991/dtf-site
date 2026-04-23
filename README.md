@@ -1,6 +1,6 @@
 # DTF Website
 
-**Live site → [your-site.netlify.app](https://your-site.netlify.app)** *(update with your Netlify URL)*
+**Live site → [dtf-website.netlify.app](https://dtf-website.netlify.app)** *(update with your Netlify URL)*
 
 A responsive, multi-page marketing website built from scratch for **Dynamic Technical Formulations (DTF)**, a contract development and manufacturing organization (CDMO) specializing in sports nutrition and nutraceutical supplements. Designed and developed entirely on personal time as a proof-of-concept for company leadership.
 
